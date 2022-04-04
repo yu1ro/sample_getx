@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sample_getx/ui/view/home_view_controller.dart';
+
+class HomeView extends StatelessWidget {
+  const HomeView({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(HomeViewController());
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            Obx(() => Text(
+                  '${controller.count}',
+                  style: Theme.of(context).textTheme.headline4,
+                )),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: controller.toAddressView,
+              child: const Text('To Address Search'),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: controller.increment,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
