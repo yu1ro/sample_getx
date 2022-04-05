@@ -6,7 +6,7 @@ class HomeViewController extends GetxController {
 
   void increment() => count++;
 
-  void toAddressView() {
+  void toApiSampleView() {
     Get.to(() => const ObjectApiView());
   }
 }

@@ -27,8 +27,8 @@ class HomeView extends StatelessWidget {
                 )),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: controller.toAddressView,
-              child: const Text('To Address Search'),
+              onPressed: controller.toApiSampleView,
+              child: const Text('To Api Sample'),
             ),
           ],
         ),
