@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_getx/ui/view/address_view_controller.dart';
+import 'package:sample_getx/ui/view/object_api_view_controller.dart';
 
-class AddressView extends StatelessWidget {
-  const AddressView({Key? key}) : super(key: key);
+class ObjectApiView extends StatelessWidget {
+  const ObjectApiView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(AddressViewController());
+    final controller = Get.put(ObjectApiViewController());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Address'),
@@ -19,11 +19,6 @@ class AddressView extends StatelessWidget {
             const Text(
               'Input postal code',
             ),
-            // TextFormField(
-            //   keyboardType: TextInputType.number,
-            //   maxLength: 7,
-            //   onChanged: (text) => controller.zipcode = text,
-            // ),
             Obx(() => Text(
               controller.address.value?.countries.name ?? '',
               style: Theme.of(context).textTheme.headline4,

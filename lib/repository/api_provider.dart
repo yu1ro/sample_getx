@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:sample_getx/model/zip_address.dart';
+import 'package:sample_getx/model/covid_api_model.dart';
 
 class ApiProvider extends GetConnect {
   // Get request

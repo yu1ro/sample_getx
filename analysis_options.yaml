@@ -7,7 +7,7 @@ analyzer:
   language:
     strict-raw-types: true
   exclude:
-    - lib/generated/*.dart
+    - "**/*.g.dart"
 linter:
   rules:
     - always_declare_return_types
