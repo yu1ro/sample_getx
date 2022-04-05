@@ -30,6 +30,11 @@ class HomeView extends StatelessWidget {
               onPressed: controller.toApiSampleView,
               child: const Text('To Api Sample'),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: controller.toListSampleView,
+              child: const Text('To List Sample'),
+            ),
           ],
         ),
       ),
