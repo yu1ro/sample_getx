@@ -10,26 +10,25 @@ class ObjectApiView extends StatelessWidget {
     final controller = Get.put(ObjectApiViewController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Address'),
+        title: const Text('Api sample'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Input postal code',
-            ),
-            Obx(() => Text(
-              controller.address.value?.countries.name ?? '',
-              style: Theme.of(context).textTheme.headline4,
-            )),
-          ],
+      body: controller.obx(
+        (address) => Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text('↓Api result below↓'),
+              Text(
+                address?.countries.name ?? '',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: controller.fetchAddress,
-        tooltip: 'search',
-        child: const Icon(Icons.search),
+        onEmpty: const Center(child: Text('empty')),
+        onError: (msg) => Center(
+          child: Text(msg ?? ''),
+        ),
       ),
     );
   }
