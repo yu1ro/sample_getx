@@ -1,5 +1,5 @@
 name: sample_getx
-description: A new Flutter project.
+description: A sample GetX project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -10,11 +10,6 @@ environment:
 
 flutter:
   uses-material-design: true
-
-#  assets:
-#    - assets/app/
-#    - assets/images/
-#    - assets/icons/
 
 dependencies:
   cupertino_icons: ^1.0.4
