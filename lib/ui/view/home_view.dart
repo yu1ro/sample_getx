@@ -35,6 +35,11 @@ class HomeView extends StatelessWidget {
               onPressed: controller.toListSampleView,
               child: const Text('To List Sample'),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: controller.showDialog,
+              child: const Text('show dialog'),
+            ),
           ],
         ),
       ),
