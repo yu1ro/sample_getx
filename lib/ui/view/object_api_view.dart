@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_getx/ui/view/object_api_view_controller.dart';
+import 'package:sample_getx/ui/controller/object_api_view_controller.dart';
 
 class ObjectApiView extends StatelessWidget {
   const ObjectApiView({Key? key}) : super(key: key);

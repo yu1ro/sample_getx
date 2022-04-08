@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:sample_getx/model/covid_api_model.dart';
-import 'package:sample_getx/repository/api_provider.dart';
+import 'package:sample_getx/service/api_service.dart';
 
 class ObjectApiViewController extends GetxController with StateMixin<CovidApiModel> {
-  final provider = ApiProvider();
+  final provider = ApiService();
   final isLoading = false.obs;
 
   @override

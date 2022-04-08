@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_getx/ui/view/list_sample_view_controller.dart';
+import 'package:sample_getx/ui/controller/list_sample_view_controller.dart';
 
 class ListSampleView extends StatelessWidget {
   const ListSampleView({Key? key}) : super(key: key);

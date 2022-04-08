@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_getx/ui/view/home_view_controller.dart';
+import 'package:sample_getx/ui/controller/home_view_controller.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key, required this.title}) : super(key: key);
